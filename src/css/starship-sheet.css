@@ -1,7 +1,7 @@
 @import 'starship-sheet/_settings.scss';
 @import 'starship-sheet/_tools.scss';
-@import 'starship-sheet/_generic.normalize.scss';
-@import 'starship-sheet/_generic.scss';
+@import 'inc/_generic.normalize.scss';
+@import 'inc/_generic.scss';
 @import 'starship-sheet/_generic.print.scss';
 @import 'starship-sheet/_elements.scss';
 @import 'starship-sheet/_objects.scss';
