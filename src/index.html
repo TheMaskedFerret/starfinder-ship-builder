@@ -2642,7 +2642,7 @@
 							<span>{{ shipName }}</span> <span>(Tier {{ tier.name }})</span>
 						</div>
 						<div class="statblockbody"> 
-							<span>{{ frame.size }} {{ frame.name.toLowerCase() + (params.hasColonyShipFramework ? " (colony ship)" : "") + (params.hasSpaceStationFramework ? " (space station)" : "") }}</span>
+							<div><span>{{ frame.size }} {{ frame.name.toLowerCase() + (params.hasColonyShipFramework ? " (colony ship)" : "") + (params.hasSpaceStationFramework ? " (space station)" : "") }}</span></div>
 							<span><strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'"> ({{ params.thrustersMaterialId }} thrusters)</span>; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></span>
 							<span><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</span>
 							<span><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ damageThreshold }}; <strong>CT</strong> {{ criticalThreshold }}</span>
@@ -2699,9 +2699,11 @@
 								</span>
 							</div>
 	
-	
-							<span>Concept</span>
-							<span v-html="params.shipConcept"></span>
+							<div v-if="params.shipConcept">
+								<span>Concept</span>
+								<span v-html="params.shipConcept"></span>
+							</div>
+							
 						</div>
 					</article> <!-- #outputText -->
 					
