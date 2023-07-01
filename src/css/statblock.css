@@ -1,0 +1,28 @@
+.statblock {
+    background-color: hsl(0, 0%, 96%);
+    border-radius: 0px;
+    font-size: 1rem;
+    display: block;
+}
+.statblockheader {
+    align-items: center;
+    background-color: hsl(0, 0%, 29%);
+    border-radius: 0px 0px 0 0;
+    color: #fff;
+    display: flex !important;
+    font-weight: 700;
+    justify-content: space-between !important;
+    line-height: 1.25;
+    padding: 0.75em 1em;
+    position: relative;
+    text-transform: uppercase !important;
+}
+.statblockbody {
+    border-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-color: hsl(0, 0%, 86%);
+    border-radius: 0px;
+    border-style: solid;
+    color: hsl(0, 0%, 29%);
+}
