@@ -240,7 +240,7 @@ if (typeof window.Clipboard.name !== undefined && window.Clipboard.name == 'e') 
 |------------------------------------------------------------------------------------------
 */
 function Ship(json) {
-	import("../vendor/vue/vue.min.js")
+	//import("../vendor/vue/vue.min.js")
 	this.app = new Vue({
         /*
         |----------------------------------------------------------------------------------
