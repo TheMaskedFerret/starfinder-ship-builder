@@ -2639,69 +2639,69 @@
 				<div class="box__info box__info--output">
 					<article class="statblock" id="statblock">
 						<div class="statblockheader">
-							<h3>{{ shipName }} (Tier {{ tier.name }})</h3>
+							<span>{{ shipName }}</span> <span>(Tier {{ tier.name }})</span>
 						</div>
 						<div class="statblockbody"> 
-							<p>{{ frame.size }} {{ frame.name.toLowerCase() + (params.hasColonyShipFramework ? " (colony ship)" : "") + (params.hasSpaceStationFramework ? " (space station)" : "") }}</p>
-							<p><strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'"> ({{ params.thrustersMaterialId }} thrusters)</span>; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></p>
-							<p><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</p>
-							<p><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ damageThreshold }}; <strong>CT</strong> {{ criticalThreshold }}</p>
-							<p v-if="ablativeArmor.id != 'none'"><strong>Ablative Armor</strong> {{ ablativeArmor.name }}
+							<span>{{ frame.size }} {{ frame.name.toLowerCase() + (params.hasColonyShipFramework ? " (colony ship)" : "") + (params.hasSpaceStationFramework ? " (space station)" : "") }}</span>
+							<span><strong>Speed</strong> {{ thrusters.speed + thrustersBooster.speed }}<span v-if="params.sources.som && params.thrustersMaterialId != 'none'"> ({{ params.thrustersMaterialId }} thrusters)</span>; <strong>Maneuverability</strong> {{ frame.maneuverability }} (turn {{ turn }})<span v-if="driftEngine.engineRating == 'Special' || driftEngine.engineRating > 0">; <strong>Drift</strong> {{ driftEngine.engineRating }}</span></span>
+							<span><strong>AC</strong> {{ armorClass }}; <strong>TL</strong> {{ targetLock }}</span>
+							<span><strong>HP</strong> {{ hp }}; <strong>DT</strong> {{ damageThreshold }}; <strong>CT</strong> {{ criticalThreshold }}</span>
+							<span v-if="ablativeArmor.id != 'none'"><strong>Ablative Armor</strong> {{ ablativeArmor.name }}
 								(forward {{ params.ablativeArmorByPosition.forward }},
 								port {{ params.ablativeArmorByPosition.port }},
 								starboard {{ params.ablativeArmorByPosition.starboard }},
 								aft {{ params.ablativeArmorByPosition.aft }})
-							</p>
+							</span>
 							<!-- shields -->
-							<p v-if="params.shieldType == 'shields'">
+							<span v-if="params.shieldType == 'shields'">
 								<strong>Shields</strong> {{ shields.name }}
 									(forward {{ params.shieldsByPosition.forward }},
 									port {{ params.shieldsByPosition.port }},
 									starboard {{ params.shieldsByPosition.starboard }},
 									aft {{ params.shieldsByPosition.aft }})
-							</p>
+							</span>
 							<!-- deflector shields -->
-							<p v-else>
+							<span v-else>
 								<strong>Deflector Shield</strong> {{ deflectorShield.name }};
 								<strong>DV</strong> {{ deflectorShield.defenseValue }}/&ndash;
-							</p>
+							</span>
 							<!-- reinforced bulkheads -->
-							<p v-if="params.sources.som && params.reinforcedBulkheadId != 'none'">
+							<span v-if="params.sources.som && params.reinforcedBulkheadId != 'none'">
 								<strong>Reinforced Bulkheads</strong> {{ reinforcedBulkhead.name }};
 								<strong>Fortification</strong> {{ reinforcedBulkhead.fortification }}
-							</p>
+							</span>
 							<!-- weapons -->
-							<p v-for="(weaponDescription, position) in weaponDescriptions">
+							<span v-for="(weaponDescription, position) in weaponDescriptions">
 								<strong>Attack ({{ position.toTitleCase() }})</strong>
 								{{ weaponDescription }}
-							</p>
-							<p>
+							</span>
+							<span>
 								<strong>Power Core(s)</strong> {{ powerCoreDescription }};
 								<strong>Drift Engine</strong> {{ driftEngine.name }};
 								<strong>Systems</strong> <span v-html="systemsDescription"></span><span v-if="hasSecurity">; <strong>Security</strong> {{ securityDescription }}</span><span v-if="expansionBaysDescription != 'None'">; <strong>Expansion Bays</strong> {{ expansionBaysDescription }}</span><span v-if="params.fortifiedHullId != 'none'">; <strong>Fortified Hull</strong> {{ fortifiedHull.name }}</span>
-							</p>
-							<p><strong>Modifiers</strong> {{ modifiersDescription }}<span v-if="params.hasCrew">; <strong>Complement</strong> {{ complement }}</span></p>
-							<p v-if="params.customComponents.length > 0"><strong>Custom Components</strong> {{ customComponentsDescription }}</p>
-							<p>
+							</span>
+							<span><strong>Modifiers</strong> {{ modifiersDescription }}<span v-if="params.hasCrew">; <strong>Complement</strong> {{ complement }}</span></span>
+							<span v-if="params.customComponents.length > 0"><strong>Custom Components</strong> {{ customComponentsDescription }}</span>
+							<span>
 								<strong>Build Points</strong> cost {{ totalBpCost }}, max {{ tier.bpBudget }}
 								<strong>Power Core Units</strong> non-essential {{ totalPcuCost.essential + totalPcuCost.nonEssential }}, essential {{ totalPcuCost.essential }}, max {{ pcuBudget }}
-							</p>
+							</span>
 	
 	
 							<div v-if="params.hasCrew">
-							<h3>Crew</h3>
-								<p v-for="(roleObj, roleId) in params.crewSkills"
+							<span>Crew</span>
+								<span v-for="(roleObj, roleId) in params.crewSkills"
 									v-if="roleObj.hasRole || (roleId == 'vi' && params.viId != 'none')">
 									<strong>{{ roleDescription[roleId] }}</strong> {{ crewDescriptions[roleId] }}
-								</p>
-								<p v-if="params.viId != 'none'">
+								</span>
+								<span v-if="params.viId != 'none'">
 									<strong>VI</strong> {{ viCrewDescription }}
-								</p>
+								</span>
 							</div>
 	
 	
-							<h3>Concept</h3>
-							<p v-html="params.shipConcept"></p>
+							<span>Concept</span>
+							<span v-html="params.shipConcept"></span>
 						</div>
 					</article> <!-- #outputText -->
 					
