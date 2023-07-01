@@ -237,7 +237,7 @@ input[type=checkbox],input[type=number] {
 }
 
 @media (max-width: 767px) {
-    #sidebar:target+.main {
+    #sidebarSFSB:target+.main {
         transform:translateY(100vh);
         transition: transform .3s ease
     }
@@ -255,7 +255,7 @@ input[type=checkbox],input[type=number] {
     }
 }
 
-.sidebar {
+.sidebarSFSB {
     background: #eee url(../img/ship-blue.jpg) no-repeat center top;
     background-size: auto auto;
     background-color: #001533;
@@ -267,16 +267,16 @@ input[type=checkbox],input[type=number] {
     left: 0
 }
 
-.contents li a,.sidebar h3,.sidebar p {
+.contents li a,.sidebarSFSB h3,.sidebarSFSB p {
     color: #c3cdda
 }
 
-.sidebar .icon,.sidebar__control {
+.sidebarSFSB .icon,.sidebar__control {
     fill: #c3cdda
 }
 
 @media (max-width: 767px) {
-    .sidebar {
+    .sidebarSFSB {
         font-size:1.1em;
         transition: transform .3s ease;
         transform: translateY(-100vh);
@@ -284,7 +284,7 @@ input[type=checkbox],input[type=number] {
         z-index: 100
     }
 
-    #sidebar:target {
+    #sidebarSFSB:target {
         transform: translateY(0)
     }
 
@@ -310,13 +310,13 @@ input[type=checkbox],input[type=number] {
         text-align: right
     }
 
-    .main,.sidebar {
+    .main,.sidebarSFSB {
         padding-top: 3em
     }
 }
 
 @media (min-width: 768px) {
-    .sidebar {
+    .sidebarSFSB {
         width:35%
     }
 
@@ -326,7 +326,7 @@ input[type=checkbox],input[type=number] {
 }
 
 @media (min-width: 1200px) {
-    .sidebar {
+    .sidebarSFSB {
         width:25%
     }
 }
