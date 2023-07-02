@@ -8,7 +8,8 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
+    overflow: hidden;
 }
 
 article,aside,footer,header,nav,section {
@@ -228,8 +229,10 @@ input[type=checkbox],input[type=number] {
 .main {
     background-color: #001533;
     padding: .5rem;
-    position: relative;
+    position: fixed;
     top: 108px;
+    overflow-y: auto;
+    height:100%;
 }
 
 .main * {
@@ -249,13 +252,15 @@ input[type=checkbox],input[type=number] {
 
 @media (min-width: 768px) {
     .main {
-        margin-left:35%
+        left:35%;
+        width:65%;
     }
 }
 
 @media (min-width: 1200px) {
     .main {
-        margin-left:25%
+        left:25%;
+        width:75%
     }
 }
 
@@ -268,7 +273,7 @@ input[type=checkbox],input[type=number] {
     padding: .5rem;
     position: fixed;
     top: 108px;
-    left: 0
+    left: 0;
 }
 
 .contents li a,.sidebar h3,.sidebar p {
