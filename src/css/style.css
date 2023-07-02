@@ -1746,3 +1746,24 @@ ul.supporters {
     border-style: solid;
     color: hsl(0, 0%, 29%)  !important;
 }
+.tmf-header {
+    color: red
+}
+.site-title {
+    font-size: 30px;
+    color: #8c1910;
+    font-weight: 600;
+    float: left;
+    line-height: 60px;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
