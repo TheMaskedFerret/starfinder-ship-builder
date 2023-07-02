@@ -227,7 +227,7 @@ input[type=checkbox],input[type=number] {
 
 .main {
     background-color: #001533;
-    padding: .5rem
+    padding: .5rem;
     position: relative;
     top: 108px;
 }
