@@ -1,8 +1,10 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+@import url('https://fonts.cdnfonts.com/css/comic-neue');
+
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -107,7 +109,7 @@ svg:not(:root) {
 }
 
 button,input,optgroup,select,textarea {
-    font-family: sans-serif;
+    font-family: 'Comic Neue', sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -204,7 +206,7 @@ template {
 }
 
 body {
-    font-family: Saira,sans-serif;
+    font-family: 'Comic Neue',sans-serif;
     line-height: 1.4;
     margin: 0;
     padding: 0
