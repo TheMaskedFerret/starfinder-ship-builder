@@ -226,6 +226,8 @@ input[type=checkbox],input[type=number] {
 .main {
     background-color: #001533;
     padding: .5rem
+    position: relative;
+    top: 108px;
 }
 
 .main * {
@@ -263,7 +265,7 @@ input[type=checkbox],input[type=number] {
     overflow-y: auto;
     padding: .5rem;
     position: fixed;
-    top: 0;
+    top: 108px;
     left: 0
 }
 
