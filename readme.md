@@ -1,6 +1,6 @@
 # Starfinder RPG Ship Builder
 
-A single-page web app for building starships for the Starfinder RPG, by Paizo Inc. This was forked from the original by James Turner. 
+A single-page web app for building starships for the Starfinder RPG, by Paizo Inc. This was forked from the original by James Turner.  
 
 ## Production and Development Modes
 
