@@ -1,5 +1,5 @@
 env:
-  FTP_DESTINATION_SERVER_DIR: ${{ github.ref == 'refs/heads/main' && vars.FTP_DESTINATION_SERVER_DIR_PROD || vars.FTP_DESTINATION_SERVER_DIR_DEV }}
+  FTP_DESTINATION_SERVER_DIR: ${{ github.ref_name == 'master' && vars.FTP_DESTINATION_SERVER_DIR_PROD || vars.FTP_DESTINATION_SERVER_DIR_DEV }}
 
 on: push
 name: 🚀 Deploy website on push
