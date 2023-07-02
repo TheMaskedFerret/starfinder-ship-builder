@@ -1747,7 +1747,8 @@ ul.supporters {
     color: hsl(0, 0%, 29%)  !important;
 }
 .tmf-header {
-    color: red
+    color: red;
+    position: fixed  !important;
 }
 .site-title {
     font-size: 30px;
